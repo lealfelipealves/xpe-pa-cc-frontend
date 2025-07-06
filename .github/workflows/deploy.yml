@@ -30,6 +30,9 @@ jobs:
       run: npm run lint
 
     - name: Build application
+      env:
+        VITE_API_URL: ${{ secrets.VITE_API_URL }}
+        VITE_API_AUTH_URL: ${{ secrets.VITE_API_AUTH_URL }}
       run: npm run build
 
     - name: Deploy to Magalu Cloud Object Storage
