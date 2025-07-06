@@ -3,7 +3,7 @@ import { useId } from "react";
 import { tv } from "tailwind-variants";
 import { FeedbackMessageField } from "./feedback-message-field";
 
-export const formField = tv({
+const formField = tv({
   base: "w-full rounded-xl px-3 pt-5 pb-2 shadow-[0px_1px_2px_0px_rgba(128,128,128,0.08)] inline-flex justify-start items-center gap-2 overflow-hidden outline outline-offset-[-1px] focus-within:ring-1 focus-within:ring-indigo-50",
   variants: {
     error: {
@@ -20,7 +20,7 @@ export const formField = tv({
   },
 });
 
-export const formLabel = tv({
+const formLabel = tv({
   base: "absolute left-3 top-2 text-[10px] transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-[14px] peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-[10px]",
   variants: {
     error: {
